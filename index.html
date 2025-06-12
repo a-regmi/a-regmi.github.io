@@ -198,6 +198,20 @@
     const sidebar = document.getElementById('sidebar');
     const toggleBtn = document.getElementById('toggleSidebar');
     let sidebarOpen = true;
+
+    // On load, close sidebar by default on mobile (<=991px), open on desktop
+    function setSidebarInitialState() {
+      if (window.innerWidth <= 991) {
+        sidebar.classList.remove('open');
+        sidebarOpen = false;
+      } else {
+        sidebar.classList.add('open');
+        sidebarOpen = true;
+      }
+    }
+    setSidebarInitialState();
+    window.addEventListener('resize', setSidebarInitialState);
+
     toggleBtn.onclick = () => {
       sidebarOpen = !sidebarOpen;
       if (sidebarOpen) {
