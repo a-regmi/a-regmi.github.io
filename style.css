@@ -1,0 +1,300 @@
+/* === Base Styles === */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #10131a;
+  color: #e6e6e6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* === Sidebar === */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  width: 270px;
+  background: rgba(20, 22, 30, 0.98);
+  box-shadow: 2px 0 24px 0 #0ff2ff33;
+  z-index: 2000;
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+  border-right: 1px solid #22242a;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar:not(.open) {
+  transform: translateX(-100%);
+}
+.sidebar-header {
+  padding: 2.5rem 1rem 1rem 1rem;
+  border-bottom: 1px solid #23242a;
+  background: none;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #0ff2ff;
+  object-fit: cover;
+  box-shadow: 0 0 16px #0ff2ff44;
+}
+.nav-link {
+  color: #e6e6e6;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  background: #0ff2ff22;
+  color: #0ff2ff;
+}
+.sandwich-btn {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 2100;
+  width: 44px;
+  height: 44px;
+  background: #181b22;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px #0ff2ff22;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sandwich-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #0ff2ff;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.main-content {
+  margin-left: 270px;
+  transition: margin-left 0.3s cubic-bezier(.77,0,.18,1);
+}
+.sidebar:not(.open) ~ .main-content {
+  margin-left: 0;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    width: 220px;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .sidebar.open ~ .main-content {
+    margin-left: 220px;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100vw;
+    max-width: 100vw;
+    border-right: none;
+  }
+  .main-content, .sidebar.open ~ .main-content {
+    margin-left: 0;
+  }
+}
+
+/* === Banner Section === */
+.banner-section {
+  position: relative;
+  min-height: 100vh;
+  background: #181b22;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(120deg, #0ff2ff11 0%, #10131a 100%);
+  z-index: 2;
+}
+#matrix-canvas {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.banner-content {
+  position: relative;
+  z-index: 3;
+  color: #e6e6e6;
+  text-shadow: 0 2px 24px #0ff2ff22;
+}
+.banner-content h1 {
+  font-family: 'Orbitron', monospace;
+  color: #0ff2ff;
+  letter-spacing: 2px;
+}
+.banner-content p.lead {
+  color: #e6e6e6;
+  font-size: 1.3rem;
+}
+
+/* === Portfolio, About, Contact Sections === */
+.section-futuristic {
+  padding: 80px 0 60px 0;
+  background: #10131a;
+  border-top: 1px solid #23242a;
+  border-bottom: 1px solid #23242a;
+}
+.section-title {
+  font-family: 'Orbitron', monospace;
+  color: #0ff2ff;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+.section-desc {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.futuristic-link {
+  color: #0ff2ff;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.futuristic-link:hover {
+  color: #fff;
+}
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  color: #e6e6e6;
+}
+.project-list li {
+  padding: 0.3rem 0;
+  border-left: 3px solid #0ff2ff;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.05rem;
+  background: #181b22;
+  border-radius: 4px;
+}
+
+/* === About Me Image === */
+.about-img-placeholder {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #0ff2ff44 0%, #23242a 100%);
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0 0 24px #0ff2ff33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+.about-placeholder {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+}
+
+/* === Buttons === */
+.futuristic-btn, .btn-outline-light.futuristic-btn {
+  background: #0ff2ff;
+  color: #10131a;
+  border: 1px solid #0ff2ff;
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px #0ff2ff33;
+  transition: background 0.2s, color 0.2s;
+}
+.futuristic-btn:hover, .btn-outline-light.futuristic-btn:hover {
+  background: #10131a;
+  color: #0ff2ff;
+  border: 1px solid #0ff2ff;
+}
+
+/* === Contact Placeholder === */
+.contact-placeholder {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #181b22;
+}
+::-webkit-scrollbar-thumb {
+  background: #0ff2ff44;
+  border-radius: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Typewriter Effect === */
+.typewriter {
+  display: inline-block;
+  border-right: 2px solid #ff2fff;
+  color: #ff2fff !important;
+  font-family: 'Orbitron', monospace;
+  font-size: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-caret 0.8s step-end infinite;
+}
+@keyframes blink-caret {
+  0%, 100% { border-color: #ff2fff; }
+  50% { border-color: transparent; }
+}
+
+.sidebar-header .text-muted {
+  color: #7ff6ff !important;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.banner-portfolio-btn {
+  font-size: 1.15rem;
+  padding: 0.75rem 2.2rem;
+  box-shadow: 0 0 16px #0ff2ff55;
+  margin-top: 2rem;
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 1px;
+}
+
+/* === Sidebar Social/Contact Icons === */
+.sidebar-icons {
+  width: 100%;
+  padding-top: 1.5rem;
+  border-top: 1px solid #23242a;
+}
+.sidebar-icon-link {
+  color: #0ff2ff;
+  opacity: 0.8;
+  transition: color 0.2s, opacity 0.2s, transform 0.2s;
+  font-size: 1.3em;
+}
+.sidebar-icon-link:hover {
+  color: #ff2fff;
+  opacity: 1;
+  transform: scale(1.15);
+  text-decoration: none;
+} 

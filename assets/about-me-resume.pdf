@@ -1,0 +1,69 @@
+%PDF-1.4
+% Basic placeholder resume for Aakash
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 500 >>
+stream
+BT
+/F1 24 Tf
+70 800 Td
+(Aakash) Tj
+/F1 14 Tf
+0 -30 Td
+(Data Scientist & Tech Enthusiast) Tj
+/F1 10 Tf
+0 -25 Td
+(Contact: aakash@email.com | +1-234-567-8901) Tj
+0 -30 Td
+(---) Tj
+/F1 12 Tf
+0 -30 Td
+(Experience) Tj
+/F1 10 Tf
+0 -18 Td
+( - [Placeholder for experience]) Tj
+/F1 12 Tf
+0 -30 Td
+(Education) Tj
+/F1 10 Tf
+0 -18 Td
+( - [Placeholder for education]) Tj
+/F1 12 Tf
+0 -30 Td
+(Skills) Tj
+/F1 10 Tf
+0 -18 Td
+( - [Placeholder for skills]) Tj
+/F1 12 Tf
+0 -30 Td
+(Projects) Tj
+/F1 10 Tf
+0 -18 Td
+( - [Placeholder for projects]) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000061 00000 n 
+0000000116 00000 n 
+0000000272 00000 n 
+0000000812 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+900
+%%EOF
