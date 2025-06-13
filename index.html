@@ -141,7 +141,7 @@
             <h5>Education</h5>
             <ul class="project-list">
               <li class="d-flex align-items-start gap-3">
-                <img src="assets/edu-icon.png" alt="Education Icon" width="48" height="48" style="border-radius:8px;">
+                <img src="assets/campbellsville_MscIT.jpg" alt="Education Icon" width="48" height="48" style="border-radius:8px;">
                 <div>
                   <a href="https://www.campbellsville.edu/academics/schools-and-colleges/school-business-economics-technology/graduate-programs/master-of-science-in-information-technology-management.html" target="_blank" class="futuristic-link">M.Sc. Information Technology and Management</a>
                   <p class="mb-0 small">[Placeholder brief description for Education]</p>
@@ -169,28 +169,31 @@
       </div>
     </section>
 
-    <!-- Contact Me -->
-    <section id="contact" class="section-futuristic">
-      <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <p class="contact-placeholder">Thank you for visiting! If you'd like to discuss a project, explore collaboration, or just say hello, I'd love to connect. Please use the form below or email me directly. I'm always open to new ideas and opportunities!</p>
-        <form class="row g-3 mt-3">
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6">
-            <input type="email" class="form-control" placeholder="Your Email" required>
-          </div>
-          <div class="col-12">
-            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-          </div>
-          <div class="col-12 text-end">
-            <button type="submit" class="btn btn-primary futuristic-btn">Send Message</button>
-          </div>
-        </form>
+   <!-- Contact Me -->
+<section id="contact" class="section-futuristic">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="contact-placeholder">
+      Thank you for visiting! If you'd like to discuss a project, explore collaboration, or just say hello, I'd love to connect. 
+      Please use the form below or email me directly. I'm always open to new ideas and opportunities!
+    </p>
+    
+    <form class="row g-3 mt-3" method="POST" action="https://formspree.io/f/xdkzgrqy">
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
       </div>
-    </section>
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-primary futuristic-btn">Send Message</button>
+      </div>
+    </form>
   </div>
+</section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
